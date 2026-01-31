@@ -52,7 +52,7 @@ export default function BonoPage() {
         <MenuItem value={15}>15 días</MenuItem>
       </TextField>
 
-      <Button variant="contained" color="primary" onClick={handleCalculate} sx={{ mb: 2 }}>
+      <Button variant="contained" color="success" onClick={handleCalculate} sx={{ mb: 2 }}>
         Calcular
       </Button>
 

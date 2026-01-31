@@ -81,11 +81,7 @@ export default function RegistroPage() {
         onChange={(e) => setRole(e.target.value)}
         fullWidth
         sx={{ mb: 2 }}
-      >
-        <MenuItem value="Developer">Developer</MenuItem>
-        <MenuItem value="Designer">Designer</MenuItem>
-        <MenuItem value="Manager">Manager</MenuItem>
-      </TextField>
+      />
 
       <Button variant="contained" color="success" onClick={handleRegister} sx={{ mb: 2 }}>
         Registrar
