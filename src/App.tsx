@@ -2,10 +2,10 @@ import { AppBar, Box, Button, Container, Toolbar, Typography } from "@mui/materi
 import { NavLink, Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-import ProductsPage from "./pages/ProductsPage";
-import SumPage from "./pages/SumPage";
-import MultiplyPage from "./pages/MultiplyPage";
-import AboutPage from "./pages/AboutPage";
+import UsuariosPage from "./pages/UsuariosPage";
+import SueldoPage from "./pages/SueldoPage";
+import BonoPage from "./pages/BonoPage";
+import RegistroPage from "./pages/RegistroPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const linkBtnSx = {
@@ -22,23 +22,22 @@ export default function App() {
       <AppBar position="static" sx={{ bgcolor: "#343a40" }}>
         <Toolbar sx={{ gap: 1 }}>
           <Typography variant="h6" sx={{ fontWeight: 800, mr: 2 }}>
-            Mi App Bootstrap
+            Mi EXAMEN Allison
           </Typography>
-
-          <Button component={NavLink} to="/" end sx={linkBtnSx}>
+          <Button component={NavLink} to="/home" end sx={linkBtnSx}>
             Home
           </Button>
-          <Button component={NavLink} to="/productos" sx={linkBtnSx}>
-            Productos
+          <Button component={NavLink} to="/usuarios" end sx={linkBtnSx}>
+            Usuarios
           </Button>
-          <Button component={NavLink} to="/suma" sx={linkBtnSx}>
-            Suma
+          <Button component={NavLink} to="/sueldo" sx={linkBtnSx}>
+            Sueldo
           </Button>
-          <Button component={NavLink} to="/multiplica" sx={linkBtnSx}>
-            Multiplica
+          <Button component={NavLink} to="/bono" sx={linkBtnSx}>
+            Bono
           </Button>
-          <Button component={NavLink} to="/acerca" sx={linkBtnSx}>
-            Acerca de
+          <Button component={NavLink} to="/registro" sx={linkBtnSx}>
+            Registro
           </Button>
 
           <Box sx={{ flex: 1 }} />
@@ -47,11 +46,11 @@ export default function App() {
 
       <Container sx={{ py: 3 }}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/productos" element={<ProductsPage />} />
-          <Route path="/suma" element={<SumPage />} />
-          <Route path="/multiplica" element={<MultiplyPage />} />
-          <Route path="/acerca" element={<AboutPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/usuarios" element={<UsuariosPage />} />
+          <Route path="/sueldo" element={<SueldoPage />} />
+          <Route path="/bono" element={<BonoPage />} />
+          <Route path="/registro" element={<RegistroPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Container>
